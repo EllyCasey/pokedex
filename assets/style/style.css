@@ -1,4 +1,6 @@
 /* BASIC STYLES HERE */
+
+
 .profile-picture {
   height: 200px;
   max-width: 100%;
@@ -8,4 +10,28 @@
 
 .profile-picture.profile-picture-sm {
   height: 64px;
+}
+
+
+.changa {
+  font-family: "Changa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.pokemon-name {
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  font-family: "Changa";
+  text-align: center;
+  border-radius: 8px;
+  padding: 1em;
+}
+
+.pokemon-details {
+  color: black;
+  font-family: "Changa";
+
 }

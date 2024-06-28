@@ -4,18 +4,22 @@ export class Pokemon {
         this.height = data.height
         this.weight = data.weight
         this.types = data.types[0].type.name
-        this.img = data.img || data.sprites.front_default
+        this.img =  data.sprites.other["official-artwork"].front_default || data.sprites.front_default
+        
     }
+
 
     get detailsHTMLTemp() {
         return `
-        <div>
-            <h1>${this.name}</h1>
-            <img src="${this.img}">
-            <p class="fs-3">Height: ${this.height}</p>
-            <p class="fs-3">Weight: ${this.weight}</p>
-            <p class="fs-3">Type: ${this.types}</p>
-            <button onclick="app.SandboxPokeController.catchPokemon()">Catch</button>
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <h1 class="pokemon-name">${this.name}</h1>
+                <img src="${this.img}">
+                <p class="fs-3 pokemon-details">Height: ${this.height}</p>
+                <p class="fs-3 pokemon-details">Weight: ${this.weight}</p>
+                <p class="fs-3 pokemon-details">Type: ${this.types}</p>
+                <button onclick="app.SandboxPokeController.catchPokemon()">Catch</button>
+            </div>
         </div>
         `
     }

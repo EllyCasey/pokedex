@@ -22,10 +22,10 @@ export class PokedexController {
         }
     }
 
-    async getPokemonDetails(pokeIndex) {
+    async getPokeDetails(pokeIndex) {
         try {
             console.log('pokeIndex', pokeIndex);
-            await pokeService.getPokemonDetails(pokeIndex)
+            await pokeService.getPokeDetails(pokeIndex)
         } catch (error) {
             Pop.error(error)
             console.error('FAILED TO GET POKES', error);
@@ -37,9 +37,9 @@ export class PokedexController {
         const pokes = AppState.pokeDudes
         let innerHTMLString = ''
         pokes.forEach((pokemon) => {
-            innerHTMLString += `<button onclick="app.PokedexController.getPokeDetails(${pokemon.index})" class="d-block btn btn-outline-danger mb-1 w-100"></button>`
+            innerHTMLString += `<button onclick="app.PokedexController.getPokeDetails('${pokemon.name}')" class="d-block btn btn-outline-danger mb-1 w-100">${pokemon.name}</button>`
         })
-        setHTML('pokedexList', innerHTMLString)
+        setHTML('pokemonList', innerHTMLString)
     }
 
     drawPokemonDetails() {

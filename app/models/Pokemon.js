@@ -14,7 +14,7 @@ export class Pokemon {
         <div class="row justify-content-center">
             <div class="col-8">
                 <h1 class="pokemon-name">${this.name}</h1>
-                <img src="${this.img}">
+                <img class="img-resize" src="${this.img}">
                 <p class="fs-3 pokemon-details">Height: ${this.height}</p>
                 <p class="fs-3 pokemon-details">Weight: ${this.weight}</p>
                 <p class="fs-3 pokemon-details">Type: ${this.types}</p>
